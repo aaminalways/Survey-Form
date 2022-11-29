@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student survey Form</title>
+    <link rel="stylesheet" href="form.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbG+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMM+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!--<img src="https://t4.ftcdn.net/jpg/03/33/08/21/240_F_333082100_iGwFKhfDQ8RGGk3VZz0qoAHCyaeQ54Hd.jpg"/>-->
+    <!--Both HTML and CSS are in single files-->
+    <!--FORM 1 included some fontawesome icons-->
+    
+  <div>  
+    <div class="personal-details-bg-container-top-part d-flex flex-row pt-3 pr-4 pl-4">
+           
+        <img src="https://img.freepik.com/free-vector/reviews-concept-landing-page_52683-13706.jpg?w=740&t=st=1668690166~exp=1668690766~hmac=0db91515300f4b3f72a079774a66d18d1581d92e033cfe85b1e18716ea2d858e" class="w-25 personal-details-image"/>
+                
+        
+        <div class="p-4">
+            <h1 class="personal-details-heading1">Your Experience could help others</h1>
+            <ul  class="personal-details-ul-list">
+                <li class="personal-details-li">Share your experience</li>
+                <li class="personal-details-li">Play The Mentor</li>
+                <li class="personal-details-li">Keep Going</li>
+            </ul>
+        </div>
+        
+    </div>
+    <div>
+        <div class="form-names d-flex flex-row justify-content-between">
+            <button class="personal-details-li form-names main-buttons w-100" id="personalDetails">
+                1.Personal Details
+            </button>
+            <button class="personal-details-li main-buttons w-100" id="yourReview">2.Your Review</button>
+            <button class="personal-details-li main-buttons w-100" id="moreDetails">3.More Details</button>
+            <button class="personal-details-li main-buttons w-100" id="collegeLife">4.College Life</button>
+          </div>
+    </div>
+    <hr class="text-para"/>
+    
+    <div class="m-4" id="personalDetailsForm">
+      <h1 class="p-3">Tell us who You are</h1>
+      <p class="p-3">students trust a review when it comes from a geniune person.Please give us few basic details about yourself.Your mobile number and email id will be kept confidential</p>
+      
+      <div class="container mb-3 personal-details-form-container w-75">
+          <h1 class="personal-details-heading1 text-center m-3">Your Details</h1>
+          <form id="myForm1" action="conn.php" method="POST">
+            <div class="d-flex flex-row">
+                <div class="m-4">
+                  <label for="name">Name <i class='fa fa-user'></i><span class="red-star"> *</span></label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your firstname,lastname" name="name" />
+                  
+                </div>
+                <div class="m-4">
+                  <label for="email">Email <i class='fa fa-envelope-open'></i><span class="red-star"> *</span></label>
+                  <input type="text" class="form-control" id="email" placeholder="name@email.com" name="email" />
+                  
+                </div>
+            </div>
+            <div  class="d-flex flex-row">
+                <div class="m-4">
+                  <label for="gender">Select Your Gender<span class="red-star"> *</span></label>
+                  <select id="gender" class="form-control" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                  
+                </div>
+                <div class="m-4">
+                  <label for="country">Select Your Country<span class="red-star"> *</span></label>
+                  <select id="country" class="form-control" name="country">
+                    <option value="india">India</option>
+                    <option value="others">Others</option>
+                    
+                  </select>
+                  
+                </div>
+            </div>
+            <div  class="d-flex flex-row">
+              <div class="m-4">
+                  <label for="mobile">Mobile Number <i class='fa fa-phone'></i><span class="red-star"> *</span></label>
+                  <input type="text" class="form-control" id="mobile" placeholder="Enter your Mobile Number" name="mobile"/>
+                  
+                </div>
+                <div class="m-4">
+                  <label for="collegeName">College Name <i class='fa fa-university'></i><span class="red-star"> *</span></label>
+                  <input type="text" class="form-control" id="collegeName" placeholder="Enter your College Name" name="collegeName"/>
+                  
+                </div>
+
+            </div>
+            <div  class="d-flex flex-row">
+              <div class="m-4">
+                  <label for="yearOfGraduation">Passed Out Year<span class="red-star">*</span></label>
+                      <select id="yearOfGraduation" class="form-control" name="Year">
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022" selcted>2022</option>
+                      </select>
+              </div>
+              <div class="m-4">
+                  <p class="gender-field-heading">Are u Currently Studying?<span class="red-star">*</span></p>
+                  <input type="radio" name="currentlyStudying" id="yes" value="yes"  />
+                  <label for="yes">Yes</label>
+                  <input type="radio" name="currentlyStudying" id="no" value="no" class="ml-2"/>
+                  <label for="no">No</label>
+              </div>
+              
+            </div>
+            <div>
+              <input type="checkbox" id="conformation" />
+              <label for="conformation">Make sure that you have entered all the required(<span class="red-star"> * </span>) details in the form</label>
+              <p><strong>Note: </strong>You may have have to refill form if any field with <span class="red-star">* </span>is Empty</p>
+            <p><strong>IF you have already submitted this form, click on "YOUR REVIEW" tab in navigation bar and fill next form.  </strong></p>
+            </div>
+            
+            <div class="text-center">
+              <button class="btn btn-primary m-3" type="submit" id="personalDetailsSubmitBtn" name="submit">Submit</button>
+            </div>
+
+            </form>
+            
+          
+        </div>
+    </div>
+  </div>
+ 
+  <!--Second Form(made small changes)-->
+  <div class="review-form-bg-container" id="reviewForm">
+    
+    <h1 class="p-2">Review Form</h1>
+      
+      
+      
+    <form id="myForm2" class="review-form-container" action="conn.php" method="POST">
+          
+      <div class="m-3">
+        <label for="placementText">
+          <strong>Regarding placement cell<span class="red-star">*</span>:</strong>
+        </label>
+  
+        
+              <textarea id="placementText" class="form-control w-75" rows="3" cols="18" placeholder="Enter your review here" name="placement"></textarea>
+  
+      </div>
+  
+      <div class="m-3">
+        <label for="infra" id="labelInfra ">
+          <strong>About your Course & Hostel <span class="red-star">*</span></strong>
+        </label>
+  
+        
+              <textarea id="infra" class="form-control w-75" rows="3" cols="18" placeholder="Enter your review here" name="courseHostel"></textarea>
+              </textarea>
+      </div>
+  
+      <div class="m-3">
+        <label for="review" id="label-age"><strong>
+          Faculty, Curriculum & Exams for your course <span class="red-star">*</span></strong>
+        </label>
+  
+        
+              <textarea id="review" class="form-control w-75" rows="3" cols="18" placeholder="Enter your review here" name="faculty"></textarea>
+      </div>
+  
+  
+      <div class="m-3 w-50">
+        <label for="labelRole" id="labelRole"><strong>
+          Are you a student?<span class="red-star">*</span></strong>
+        </label>
+        
+        
+        <select class="form-control" id="labelRole"  class="form-control" name="role">
+          <option value="student" selected>student</option>
+          <option value="lecture">lecture</option>
+          <option value="parent">parent</option>
+        </select>
+      </div>
+  
+      <div class="m-3">
+        <p><strong>would you recommend your college to others? <span class="red-star">*</span></strong></p>
+                  <input type="radio" name="recommending" id="yes" value="yes"  />
+                  <label for="yes">Yes</label>
+                  <input type="radio" name="recommending" id="no" value="no" class="ml-2" checked/>
+                  <label for="no">No</label>
+      </div>
+      <div class="m-3">
+        <h6><strong>Campus Life</strong><lighter>(check all that Apply)<span class="red-star">*</span></lighter></h6>
+        
+        <div class="d-flex flex-column justify-content-start">
+          <div>
+            
+              <input type="checkbox"
+                id="inp-1" name="campus" value="Sports."/>
+              <label for="inp-1" class="m-1">Sports</label>
+            <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-2" name="campus" value="INNOVATION."/>
+            <label for="inp-2" class="m-1">INNOVATION</label>
+            <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-3"name="campus" value="CANTEEN."/>
+            <label for="inp-3" class="m-1">CANTEEN</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-4" name="campus" value="TECHINCAL LABS."/>
+            <label for="inp-4" class="m-1">TECHINCAL LABS</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-5" name="campus" value="TED-X."/>
+            <label for="inp-5" class="m-1">TED-X</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-6" name="campus" value="EVENTS."/>
+            <label for="inp-6" class="m-1">EVENTS</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-7" name="campus" value="PEP-TALKS."/>
+            <label for="inp-7" class="m-1">PEP-TALKS</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              for="inp-8" name="campus" value="INTERACTIONS."/>
+            <label for="inp-8" class="m-1">INTERACTIONS</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-9" name="campus" value="WHEELER-PARKING."/>
+            <label for="inp-9" class="m-1">WHEELER-PARKING</label>
+          <br/>
+          </div>
+          <div>
+            
+            <input type="checkbox"
+              id="inp-10" class="p-1" name="campus" value="VIEW POINT." />
+            <label for="inp-10" class="m-1">VIEW POINT</label>
+              
+          <br/>
+          </div>
+        </div>
+      </div>
+  
+      <div class="m-3">
+        <label for="comment">
+          <strong>Any other information that you would like to share</strong>
+        </label>
+  
+        
+        <textarea id="comment" class="form-control w-75" rows="3" cols="18" placeholder="Enter your review here" name="other"></textarea>
+      </div>
+      <div>
+        <input type="checkbox" id="conformation"/>
+        <label for="conformation">Make sure that you have entered all the required(<span class="red-star"> * </span>) details in the form</label>
+        <p><strong>Note: </strong>You may have have to refill form if any field with <span class="red-star">* </span>is Empty</p>
+        <p><strong>IF you have already submitted this form, click on "MORE DETAILS" tab in navigation bar and fill next form.  </strong></p>
+      
+      </div>
+          
+          <button class="btn btn-primary m-3" type="submit" id="yourReviewSubmitBtn" name="sub">Submit</button>
+    </form>
+      </div>
+  </div>
+ 
+  
+
+
+<!--Third Form(included font awsome icons in it made small changes)-->
+  <div class="p-1 more-details-form-container w-75 m-3" id="moreDetailsForm">
+    <h2 class="text-center mt-3">More Details</h2>
+    <form method="POST" id="myForm3" action="conn.php" >
+      <div class="p-5">
+
+      <h5 >Verify Your Credentials <span class="red-star"> * </span></h5>
+      <p>Enter the of your Linkinden or Facebook profile that carry your name & your college name.Please make sure that the link you submit (Linkdedin or Facebook),is updated with your college & course name, as we will publish your review only after verifying the same. </p>
+      <h5>Your Linkedin/Facebook Profile</h5>
+      <p>How to get the URL for your Linkedin profile:</h4>
+      <p>1.Log into Linkedin/Facebook (on a browse), then click on your name(near profile pic)<p>
+      <p>2.Copy the Linkedin/Facebook profile URL in the address bar of your browser</p>
+      <p class="ml-1">Screenshots below  for refrence</p>
+      <div class="d-flex flex-row">
+        <div class="p-2">
+          <p class="profilehead">Linkedin : <i class='fa fa-linkedin-square'></i></p>
+          
+          <img src="https://img.freepik.com/free-vector/flat-design-linkedin-mockup_23-2149213208.jpg?w=1060&t=st=1668793578~exp=1668794178~hmac=f3e155db8b0ede2f79858f04fb571987f098bf0e21003b154b0d0d2f49032efd" class="w-75 more-details-image"/>
+        </div>
+        <div class="p-2">
+          <p class="profilehead">Facebook : <i class='fa fa-facebook-official'></i> </p>
+          
+          <img src="https://img.freepik.com/free-vector/facebook-mobile-post-with-flat-design_23-2147820174.jpg?" class="w-100 more-details-image"/>
+        </div>
+      </div>
+        <p>3.Paste it in the space provided below</p>
+        <input type="text" class="url w-50"  placeholder="Enter Linkedin/Facebook Profile URL" name="url" />
+      <div class="d-flex flex-row mt-5">
+        <hr class="more-details-hr"/>
+        <p><strong>---(OR)---</strong></p>
+        <hr class="more-details-hr"/>
+      
+      </div>
+      <div class="p-3">
+        <p>If you don't have an updated Linkedin or Facebook account ,You can upload official website url of your college  </p>
+
+        <input type="text" class="url w-50" placeholder="Enter your college website link" name="document">
+      </div>
+      <div class="p-3">
+          
+          <p>1.This link will be shown along with your review.</p>
+          <p class="span1 mt-2"><span style="color: black; font-size: 15px; width: 200px; font-weight: 600;">Enter Your portfolio link here:   <br>
+
+          <input  type="text" class="url w-50" placeholder="Enter your portfolio link" name="picture"/>
+      </div>
+      <hr>
+      <div>
+        <input type="checkbox" id="conformation"/>
+        <label for="conformation">Make sure that you have entered all the required(<span class="red-star"> * </span>) details in the form</label>
+        <p><strong>Note: </strong>You may have have to refill form if any field with <span class="red-star">* </span>is Empty</p>
+        <p><strong>IF you have already submitted this form, click on "COLLEGE LIFE" tab in navigation bar and fill next form.  </strong></p>
+     
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" name="sb" type="submit" id="moreDetailsSubmitBtn">Submit</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  <!--FOURTH FORM(made small changes)-->
+  <div class="college-life-form-container m-5" id="collegeLifeForm">
+    <h1 class="text-center mt-4">College Life</h1>
+    <form action="conn.php" method="POST">
+      <div class="bg-container p-5">
+        <h5>How open is your college to students from outside the home state?(Choose all that apply)<span class="red-star">*</span></h5>
+        
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+                <input id="a1" type="checkbox" name="que1" value="No language Challenges."/>
+                <label for="a1"> No language Challenges.</label>
+            </div>
+            <div>
+                <input type="checkbox" name="que1" id="a2" value="Support Staff/Faculty uses native language."/>
+                <label for="a2">Support Staff/Faculty uses native language</label>
+            </div>
+            <div>
+                <input type="checkbox" name="que1" id="a3" value="Groupism based on state,exists among student."/>
+                <label for="a3">Groupism based on state,exists among student</label> 
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="que1" id="a4" value="Majority students from outside state."/>
+                <label for="a4">Majority students from outside state </label>
+            </div>
+            <div>
+                <input type="checkbox" name="que1" id="a5" value="Mostly English is used n campus."/>
+                <label for="a5">Mostly English is used n campus</label>
+            </div>
+            <div>
+                <input type="checkbox" name="que1" id="a6" value="Majority students from home state."/>
+                <label for="a6">Majority students from home state</label> 
+            </div>
+          </div>
+        </div>
+        <h5>How would you describe the quality of industry exposure(Choose all that apply)<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+            <div class="p-3 w-50">
+              <div>
+                  <input type="checkbox" name="que2" id="b1" value="Internships only in final year."/>
+                  <label for="b1">Internships only in final year</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="que2" id="b2" value="Students work with faculty on their projects."/>
+                  <label for="b2">Students work with faculty on their projects</label>
+              </div>
+            </div>
+        
+            <div class="p-3 w-50">
+                <div>
+                    <input type="checkbox" name="que2" id="b3" value="Internships and projects every semester."/>
+                    <label for="b3">Internships and projects every semester</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="que2" id="b4" value="No industry projects or exposure."/>
+                    <label for="b4">No industry projects or exposure</label>
+                </div>
+            </div>
+      </div>
+        <h5>How would you describe security on campus(Choose all that apply)<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+            <div class="p-3 w-50">
+              <div>
+                  <input type="checkbox" name="que3" id="c1" value="Guards and CCTV present everywhere."/>
+                  <label for="c1">Guards and CCTV present everywhere</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="que3" id="c2" value="Outsiders can enter campus unchecked."/>
+                  <label for="c2">Outsiders can enter campus unchecked</label>
+              </div>
+            </div>
+        
+            <div class="p-3 w-50">
+                <div>
+                    <input type="checkbox" name="que3" id="c3" value="Nobody can move around in campus."/>
+                    <label for="c3">Nobody can move around in campus</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="que3" id="c4" value="Secutity breaches happened."/>
+                    <label for="c4">Secutity breaches happened</label>
+                </div>
+            </div>
+        </div>
+        <h5>How hectic is your schedule(per Week)<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+              <input type="radio" name="lectures" id="moreThan15"  value="More than 15 lectures"/>
+              <label for="moreThan15">More than 15 lectures</label>
+            </div>
+            <div>
+              <input type="radio" name="lectures" id="lessThan15" value="less than 5 lectures"/>
+              <label  for="lessThan15">less than 5 lectures</label>
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+              <div>
+                <input type="radio" name="lectures" id="moreThan15" value="More than 15 lectures"/>
+                <label for="moreThan15">More than 15 lectures</label>
+              </div>
+              <div>
+                <input type="radio" name="lectures"  id="moreThan15" value="more than 15 lectures"/>
+                <label  for="lessThan15">more than 15 lectures</label>
+              </div>
+          </div>
+        </div>
+          
+        <h5>How does your colleg Deal with ragging, harrassment, Discrimination<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+              <input type="radio" name="ragging" id="one" value="rusticated if guilty proved"/>
+              <label for="one">rusticated if guilty proved</label>
+            </div>
+            <div>
+              <input type="radio" name="ragging" id="two" value="Let off with warning"/>
+              <label  for="two">Let off with warning</label>
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+              <div>
+                <input type="radio" name="ragging"  id="three" value="No concrete action after complaint"/>
+                <label for="three">No concrete action after complaint</label> 
+              </div>
+              <div>
+                <input type="radio" name="ragging"  id="four" value="No action taken unless complaint filed"/>
+                <label  for="four">No action taken unless complaint filed</label>
+              </div>
+          </div>
+        </div>
+          
+        <h5>Do you have an active Entrepreneurship Cell?<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+              <input type="radio" name="entrepreneur" id="activelyPresect" value="Very Active,Authorities involved"/>
+              <label for="activelyPresect">Very Active,Authorities involved</label>  
+            </div>
+            <div>
+              <input type="radio" name="entrepreneur" id="runByStudents" value="Active run by students"/>
+              <label  for="runByStudents">Active run by students</label>
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+              <div>
+                <input type="radio" name="entrepreneur"  id="noSuchCell" value="No such cell present"/>
+                  <label for="noSuchCell">No such cell present</label> 
+              </div>
+              <div>
+                <input type="radio" name="entrepreneur"  id="notIndependent" value="Present but not independent"/>
+                <label  for="notIndependent">Present but not independent</label>
+              </div>
+          </div>
+        </div>
+          
+        <h5>How restricted is movement of girls in campus?<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+              <input type="radio" name="girls" id="veryRestricted" value="Too much of restrictions"/>
+              <label for="veryRestricted">Too much of restrictions</label>  
+            </div>
+            <div>
+              <input type="radio" name="girls" id="Not allowed" value="Not allowed without permission"/>
+              <label  for="Not allowed">Not allowed without permission</label>
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+              <div>
+                <input type="radio" name="girls"  id="allowedWithRestrictions" value="allowed With Restrictions"/>
+                <label for="allowedWithRestrictions">allowed With Restrictions</label> 
+              </div>
+              <div>
+                <input type="radio" name="girls"  id="notAtAll" value="Not at all restricted"/>
+                 <label  for="notAtAll">Not at all restricted</label>
+              </div>
+          </div>
+        </div>
+        
+        <h5>What is frequency of tests and exams(Choose all that apply)<span class="red-star">*</span></h5>
+        
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="tests" id="d1" value="Semester."/>
+                <label for="d1">Semester.</label>
+            </div>
+            <div>
+                <input type="checkbox" name="tests" id="d2" value="Monthly."/>
+                <label for="d2">Monthly</label>
+            </div>
+            <div>
+                <input type="checkbox" name="tests" id="d3" value="Weekly."/>
+                <label for="d3">Weekly</label> 
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="tests" id="d4" value="Dialy."/>
+                <label for="d4">Dialy</label>
+            </div>
+            <div>
+                <input type="checkbox" name="tests" id="d5" value="Annual."/>
+                <label for="d5">Annual</label>
+            </div>
+            <div>
+                <input type="checkbox" name="tests" id="d6" value="No set frequency." />
+                <label for="d6">No set frequency</label> 
+            </div>
+          </div>
+        </div>
+        <h5>How would you describe placement cell in your college?<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+            <div class="p-3 w-50">
+              <div>
+                  <input type="checkbox" name="pcell" id="e1" value="Very organized and proactive."/>
+                  <label for="e1">Very organized and proactive</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="pcell" id="e2" value="No support at all." />
+                  <label for="e2">No support at all</label>
+              </div>
+            </div>
+        
+            <div class="p-3 w-50">
+                <div>
+                    <input type="checkbox" name="pcell" id="e3" value="extra charges for placement support."/>
+                    <label for="e3">extra charges for placement support</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="pcell" id="e4" value="Not yet developed process."/>
+                    <label for="e4">Not yet developed process</label>
+                </div>
+            </div>
+        </div>
+        <h5>How would you describe sports facilities<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+            <div class="p-3 w-50">
+              <div>
+                  <input type="checkbox" name="sports" id="f1" value="multiple sports grounds & training present."/>
+                  <label for="f1">multiple sports grounds & training present</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="sports" id="f2" value="Limited sports facilities found."/>
+                  <label for="f2">Limited sports facilities found</label>
+              </div>
+            </div>
+        
+            <div class="p-3 w-50">
+                <div>
+                    <input type="checkbox" name="sports" id="f3" value="inadequate sports facilitiespresent."/>
+                    <label for="f3">inadequate sports facilitiespresent</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="sports" id="f4" value="No time for sports and extra curricular."/>
+                    <label for="f4">No time for sports and extra curricular</label>
+                </div>
+            </div>
+        </div>
+        <h5>Rules regarding dresscode in campus<span class="red-star">*</span></h5>
+        <div class="d-flex flex-row m-2">
+            <div class="p-3 w-50">
+              <div>
+                  <input type="checkbox" name="dress" id="g1" value="No specific dresscode."/>
+                  <label for="g1">No specific dresscode</label>
+              </div>
+              <div>
+                  <input type="checkbox" name="dress" id="g2" value="Dress conservatively."/>
+                  <label for="g2">Dress conservatively</label>
+              </div>
+            </div>
+        
+            <div class="p-3 w-50">
+                <div>
+                    <input type="checkbox" name="dress" id="g3" value="Strict dresscode for girls."/>
+                    <label for="g3">Strict dresscode for girls</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="dress" id="g4" value="No Dresscode for boys."/>
+                    <label for="g4">No Dresscode for boys</label>
+                </div>
+            </div>
+        </div>
+        <h5>Students who have graduated from your college mostly doing what(Choose all that apply)<span class="red-star">*</span></h5>
+        
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="jobs" id="h1" value="Employed in core jobs."/>
+                <label for="h1"> Employed in core jobs</label>
+            </div>
+            <div>
+                <input type="checkbox" name="jobs" id="h2" value="Employed but not in core jobs."/>
+                <label for="h2">Employed but not in core jobs</label>
+            </div>
+            <div>
+                <input type="checkbox" name="jobs" id="h3" value="Still lokking for better opportunities."/>
+                <label for="h3">Still lokking for better opportunities</label> 
+            </div>
+          </div>
+      
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="jobs" id="h4" value="Opted for higher studies in India."/>
+                <label for="h4">Opted for higher studies in India</label>
+            </div>
+            <div>
+                <input type="checkbox" name="jobs" id="h5" value="Opted for higher studies outside India."/>
+                <label for="h5">Opted for higher studies outside India</label>
+            </div>
+            <div>
+                <input type="checkbox" name="jobs" id="h6" value="Started their own ventures."/>
+                <label for="h6">Started their own ventures</label> 
+            </div>
+          </div>
+        </div>
+        <h5>How easy is it to score in college exams(Choose all that apply)<span class="red-star">*</span></h5>
+        
+        <div class="d-flex flex-row m-2">
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="exams" id="i1" value="Easy to score by writing from textbook."/>
+                <label for="i1">Easy to score by writing from textbook</label>
+            </div>
+            <div>
+                <input type="checkbox" name="exams" id="i2" value="easy to score by studying before exams."/>
+                <label for="i2">easy to score by studying before exams</label>
+            </div>
+            
+          </div>
+      
+          <div class="p-3 w-50">
+            <div>
+                <input type="checkbox" name="exams" id="i3" value="Have to studey always to score."/>
+                <label for="i3">Have to studey always to score</label>
+            </div>
+            <div>
+                <input type="checkbox" name="exams" id="i4" value="Answers are application based & Technical."/>
+                <label for="i4">Answers are application based & Technical</label>
+            </div>
+            
+          </div>
+        </div>
+        <div>
+          <input type="checkbox" id="conformation" />
+          <label for="conformation">Make sure that you have entered all the required(<span class="red-star"> * </span>) details in the form</label>
+          <p><strong>Note: </strong>You may have have to refill form if any field with <span class="red-star">* </span>is Empty</p>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" type="submit" name="sbm">Submit</button>
+       
+        </div>
+        <p class="text-centre"><strong>THANKS FOR YOUR VALUABLE REVIEW. </strong></p>
+        <p class="text-centre"><strong>To fill another review , click on personal details. </strong></p>
+        
+      </form>
+
+      
+      
+  </div>
+  
+  
+<script type="text/javascript" src="form.js"></script> 
+
+
+
+</body>
+</html>
